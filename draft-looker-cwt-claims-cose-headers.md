@@ -35,8 +35,30 @@ When a COSE structure is an encrypted CWT
 
 When a COSE structure is leveraging a detached signature
 
+# Terminology
+
+# Representation
+
+TODO
+
 # Security Considerations
+
+TODO
 
 # IANA Considerations
 
+TODO
+
+## CWT Claim
+
+- Claim Name: cwt
+- Claim Description: CWT claims
+- JWT Claim Name: N/A
+- Claim Key: TBD
+- Claim Value Type(s): map
+- Change Controller: TBD
+- Specification Document(s): {#representation}
+
 # Acknowledgments
+
+TODO
