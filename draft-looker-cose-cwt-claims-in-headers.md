@@ -54,7 +54,7 @@ This document defines the following header parameter
 
 
 |   Name   |  Label | Value Type | Value Registry |   Description   |
-+----------+--------+------------+----------------+-----------------+
+|----------|--------|------------|----------------|-----------------|
 |   cwt    |  TBD   | map        | [@!IANA.CWT]   | location for    |
 | claims   |        |            |                | CWT claims in   |
 |          |        |            |                | COSE header     |
