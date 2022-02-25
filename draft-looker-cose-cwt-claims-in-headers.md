@@ -53,11 +53,9 @@ Section 5.3 of the [JWT] RFC defined a similar mechanism for expressing JWT base
 This document defines the following header parameter
 
 
-|   Name   |  Label | Value Type | Value Registry |   Description   |
-|----------|--------|------------|----------------|-----------------|
-|   cwt    |  TBD   | map        | [@!IANA.CWT]   | location for    |
-| claims   |        |            |                | CWT claims in   |
-|          |        |            |                | COSE header     |
+|   Name          |  Label | Value Type | Value Registry |   Description   |
+|-----------------|--------|------------|----------------|-----------------|
+|   cwt claims    |  TBD   | map        | [@!IANA.CWT]   | location for CWT claims in  COSE headers   |
 
 
 # Privacy Considerations
