@@ -2,16 +2,16 @@
 
 This is the working area for the individual Internet-Draft, "CBOR Web Token (CWT) Claims in COSE Headers".
 
-* [Editor's Copy](https://tplooker.github.io/draft-looker-cwt-claims-cose-headers/#go.draft-looker-cwt-claims-cose-headers.html)
-* [Datatracker Page](https://datatracker.ietf.org/doc/draft-looker-cwt-claims-cose-headers)
-* [Individual Draft](https://datatracker.ietf.org/doc/html/draft-looker-cwt-claims-cose-headers)
-* [Compare Editor's Copy to Individual Draft](https://tplooker.github.io/draft-looker-cwt-claims-cose-headers/#go.draft-looker-cwt-claims-cose-headers.diff)
+* [Editor's Copy](https://tplooker.github.io/draft-looker-cose-cwt-claims-in-headers/#go.draft-looker-cose-cwt-claims-in-headers.html)
+* [Datatracker Page](https://datatracker.ietf.org/doc/draft-looker-cose-cwt-claims-in-headers)
+* [Individual Draft](https://datatracker.ietf.org/doc/html/draft-looker-cose-cwt-claims-in-headers)
+* [Compare Editor's Copy to Individual Draft](https://tplooker.github.io/draft-looker-cose-cwt-claims-in-headers/#go.draft-looker-cose-cwt-claims-in-headers.diff)
 
 
 ## Contributing
 
 See the
-[guidelines for contributions](https://github.com/tplooker/draft-looker-cwt-claims-cose-headers/blob/main/CONTRIBUTING.md).
+[guidelines for contributions](https://github.com/tplooker/draft-looker-cose-cwt-claims-in-headers/blob/main/CONTRIBUTING.md).
 
 Contributions can be made by creating pull requests.
 The GitHub interface supports creating pull requests using the Edit (✏) button.

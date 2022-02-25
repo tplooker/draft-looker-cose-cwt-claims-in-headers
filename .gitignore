@@ -10,7 +10,7 @@
 .targets.mk
 /*-[0-9][0-9].xml
 archive.json
-draft-looker-cwt-claims-cose-headers.xml
+draft-looker-cose-cwt-claims-in-headers.xml
 lib
 report.xml
 venv/
