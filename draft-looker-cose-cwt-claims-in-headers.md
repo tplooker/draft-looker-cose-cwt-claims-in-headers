@@ -36,47 +36,49 @@ organization = "Microsoft"
 
 .# Abstract
 
-This document describes how to use CBOR Web Token (CWT) claims in the header of any COSE structure. This functionality helps to facilitate applications that wish to make use of CBOR Web Token (CWT) claims in encrypted COSE structures and or COSE structures featuring detached signatures.
+This document describes how to include CBOR Web Token (CWT) claims in the header parameters of any COSE structure. This functionality helps to facilitate applications that wish to make use of CBOR Web Token (CWT) claims in encrypted COSE structures and/or COSE structures featuring detached signatures, while having some of those claims be available before decryption and/or without inspecting the detached payload.
 
 {mainmatter}
 
 # Introduction
 
-In some applications of COSE it is useful to have a standard representation of [CWT] claims available in the header. These include encrypted COSE structures which may or may not be an encrypted CWT and or those featuring a detached signature.
+In some applications of COSE, it is useful to have a standard representation of [CWT] claims available in the header parameters. These include encrypted COSE structures, which may or may not be an encrypted CWT and/or those featuring a detached signature.
 
-Section 5.3 of the [JWT] RFC defined a similar mechanism for expressing JWT based claims in JOSE headers. However because the COSE and CWT RFC's were standardized at different times and as such have separate IANA registries for registration, including the assignment of the same numeric labels for distinct purposes, they are in effect different namespaces. This means the same approach taken by the [JWT] RFC which was to have awareness of registrations across the two registries to ensure they never collided cannot be accomplished with COSE and CWT. Instead this document defines a single header parameter in the COSE header IANA registry which creates a location to store CWT claims in a COSE header.
+Section 5.3 of the [JWT] RFC defined a similar mechanism for expressing selected JWT based claims as JOSE header parameters.  This JWT feature was motivated by the desire to have certain claims, such as Key ID values, be visible to software processing the JWT, even though the JWT is encrypted.  No corresponding feature was standardized for CWTs, which was an omission that this specification corrects.
+
+Directly including CWT claim values as COSE header parameter values would not work, since there are conflicts between the numeric header parameter assignments and the numeric CWT claim assignments.  Instead, this specification defines a single header parameter registered in the IANA "COSE Header Parameters" registry that creates a location to store CWT claims in a COSE header parameter.
 
 # Terminology
 
 # Representation
 
-This document defines the following header parameter
+This document defines the following COSE header parameter:
 
 
 |   Name          |  Label | Value Type | Value Registry |   Description   |
 |-----------------|--------|------------|----------------|-----------------|
-|   cwt claims    |  TBD   | map        | [@!IANA.CWT]   | location for CWT claims in  COSE headers   |
+|   cwt claims    |  TBD (requested assignment 11)   | map        | [@!IANA.CWT]   | location for CWT claims in  COSE headers   |
 
 
 # Privacy Considerations
 
-Some of the registered CWT claims may contain privacy-sensitive information. Therefore care MUST be taken when expressing CWT claims in COSE headers.
+Some of the registered CWT claims may contain privacy-sensitive information. Therefore care must be taken when expressing CWT claims in COSE headers.
 
 # Security Considerations
 
-In cases where CWT claims are both present in the payload and the header, an application receiving such as structure SHOULD verify that their values are identical, unless the application defines other specific processing rules for these claims.
+In cases where CWT claims are both present in the payload and the header, an application receiving such as structure MUST verify that their values are identical, unless the application defines other specific processing rules for these claims.
 
 # IANA Considerations
 
-IANA is requested to register the new COSE Header parameters in Table 1 in the "COSE Header Parameters" registry. The "Value Registry" field is empty for all of the items. For each item, the 'Reference' field points to this document.
-
-IANA is requested to register the new COSE Header parameter in the table present in (#representation) in the "COSE Header Parameters" registry [@!IANA.COSE].
+IANA is requested to register the new COSE Header parameter in the table in (#Representation) in the "COSE Header Parameters" registry [@!IANA.COSE].
 
 {backmatter}
 
 # Document History
 
 -00
+
+* Initial version
 
 <reference anchor="IANA.COSE" target="https://www.iana.org/assignments/cose/cose.xhtml#header-parameters">
  <front>
