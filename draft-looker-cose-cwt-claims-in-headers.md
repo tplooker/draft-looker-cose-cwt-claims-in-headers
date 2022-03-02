@@ -42,9 +42,9 @@ This document describes how to include CBOR Web Token (CWT) claims in the header
 
 # Introduction
 
-In some applications of COSE, it is useful to have a standard representation of [CWT] claims available in the header parameters. These include encrypted COSE structures, which may or may not be an encrypted CWT and/or those featuring a detached signature.
+In some applications of COSE, it is useful to have a standard representation of CWT claims [@RFC8392] available in the header parameters. These include encrypted COSE structures, which may or may not be an encrypted CWT and/or those featuring a detached signature.
 
-Section 5.3 of the [JWT] RFC defined a similar mechanism for expressing selected JWT based claims as JOSE header parameters.  This JWT feature was motivated by the desire to have certain claims, such as Key ID values, be visible to software processing the JWT, even though the JWT is encrypted.  No corresponding feature was standardized for CWTs, which was an omission that this specification corrects.
+Section 5.3 of the JWT RFC [@RFC7519] defined a similar mechanism for expressing selected JWT based claims as JOSE header parameters.  This JWT feature was motivated by the desire to have certain claims, such as Key ID values, be visible to software processing the JWT, even though the JWT is encrypted.  No corresponding feature was standardized for CWTs, which was an omission that this specification corrects.
 
 Directly including CWT claim values as COSE header parameter values would not work, since there are conflicts between the numeric header parameter assignments and the numeric CWT claim assignments.  Instead, this specification defines a single header parameter registered in the IANA "COSE Header Parameters" registry that creates a location to store CWT claims in a COSE header parameter.
 
@@ -70,7 +70,7 @@ In cases where CWT claims are both present in the payload and the header, an app
 
 # IANA Considerations
 
-IANA is requested to register the new COSE Header parameter in the table in (#Representation) in the "COSE Header Parameters" registry [@!IANA.COSE].
+IANA is requested to register the new COSE Header parameter in the table in (#representation) in the "COSE Header Parameters" registry [@!IANA.COSE].
 
 {backmatter}
 
