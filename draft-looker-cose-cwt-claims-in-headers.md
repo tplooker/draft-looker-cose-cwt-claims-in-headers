@@ -8,7 +8,7 @@ keyword = ["COSE", "JOSE"]
 
 [seriesInfo]
 name = "Internet-Draft"
-value = "draft-looker-cose-cwt-claims-in-headers-latest"
+value = "draft-ietf-cose-cwt-claims-in-headers-latest"
 status = "standard"
 
 [pi]
