@@ -8,7 +8,7 @@ keyword = ["COSE", "JOSE"]
 
 [seriesInfo]
 name = "Internet-Draft"
-value = "draft-looker-cose-cwt-claims-in-headers-latest"
+value = "draft-ietf-cose-cwt-claims-in-headers-latest"
 status = "standard"
 
 [pi]
@@ -78,7 +78,7 @@ IANA is requested to register the new COSE Header parameter in the table in (#re
 
 -00
 
-* Initial version
+* Created draft-ietf-cose-cwt-claims-in-headers-00 from draft-looker-cose-cwt-claims-in-headers-00 following working group adoption.
 
 <reference anchor="IANA.COSE" target="https://www.iana.org/assignments/cose/cose.xhtml#header-parameters">
  <front>
