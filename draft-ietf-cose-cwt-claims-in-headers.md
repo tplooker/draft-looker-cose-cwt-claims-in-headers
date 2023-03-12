@@ -69,7 +69,7 @@ CWT-Claims = {
 Claim-Label = int / text
 ```
 
-It is RECOMMENDED that the CWT claims header parameter is used only in a protected header to avoid the contents from being malleable. The header parameter MUST only occur once in either the protected or unprotected header of a COSE structure.
+It is RECOMMENDED that the CWT claims header parameter is used only in a protected header to avoid the contents being malleable. The header parameter MUST only occur once in either the protected or unprotected header of a COSE structure.
 
 # Privacy Considerations
 
