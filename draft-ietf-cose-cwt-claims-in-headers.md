@@ -57,9 +57,9 @@ This document defines the following COSE header parameter:
 
 |   Name          |  Label | Value Type | Value Registry |   Description   |
 |-----------------|--------|------------|----------------|-----------------|
-|   cwt claims    |  TBD (requested assignment 11)   | map        | [@!IANA.CWT]   | location for CWT claims in  COSE headers   |
+|   CWT claims    |  TBD (requested assignment 11)   | map        | [@!IANA.CWT]   | location for CWT claims in  COSE headers   |
 
-The following is a non-normative description for the value type of the cwt claim header parameter using CDDL [@RFC8610].
+The following is a non-normative description for the value type of the CWT claim header parameter using CDDL [@RFC8610].
 
 ```
 CWT-Claims = {
@@ -69,7 +69,7 @@ CWT-Claims = {
 Claim-Label = int / text
 ```
 
-It is RECOMMENDED that the cwt claims header parameter is used only in a protected header to avoid the contents from being malleable. The header parameter MUST only occur once in either the protected or unprotected header of a COSE structure.
+It is RECOMMENDED that the CWT claims header parameter is used only in a protected header to avoid the contents from being malleable. The header parameter MUST only occur once in either the protected or unprotected header of a COSE structure.
 
 # Privacy Considerations
 
