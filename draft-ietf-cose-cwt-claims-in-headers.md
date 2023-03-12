@@ -85,6 +85,10 @@ IANA is requested to register the new COSE Header parameter in the table in (#re
 
 # Document History
 
+-02
+
+* Added CDDL description for CWT claim value.
+
 -01
 
 * Changed example from Key ID to Issuer.
