@@ -87,6 +87,10 @@ IANA is requested to register the new COSE Header parameter in the table in (#re
 
 # Document History
 
+-03
+
+* Added recommendation around header treatment in protected vs unprotected
+
 -02
 
 * Added CDDL description for CWT claim value.
