@@ -48,7 +48,9 @@ Section 5.3 of the JWT RFC [@RFC7519] defined a similar mechanism for expressing
 
 Directly including CWT claim values as COSE header parameter values would not work, since there are conflicts between the numeric header parameter assignments and the numeric CWT claim assignments.  Instead, this specification defines a single header parameter registered in the IANA "COSE Header Parameters" registry that creates a location to store CWT claims in a COSE header parameter.
 
-# Terminology
+## Requirements Terminology
+
+The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "NOT RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in BCP 14 [@RFC2119] [@RFC8174] when, and only when, they appear in all capitals, as shown here.
 
 # Representation
 
@@ -77,7 +79,9 @@ Some of the registered CWT claims may contain privacy-sensitive information. The
 
 # Security Considerations
 
-In cases where CWT claims are both present in the payload and the header, an application receiving such as structure MUST verify that their values are identical, unless the application defines other specific processing rules for these claims.
+In cases where CWT claims are both present in the payload and the header, an application receiving such a structure MUST verify that their values are identical, unless the application defines other specific processing rules for these claims.
+
+Implementers should also review the security considerations for CWT, which are documented in Section 8 of [@RFC8392].
 
 # IANA Considerations
 
