@@ -81,7 +81,7 @@ Some of the registered CWT claims may contain privacy-sensitive information. The
 
 In cases where CWT claims are both present in the payload and the header, an application receiving such a structure MUST verify that their values are identical, unless the application defines other specific processing rules for these claims.
 
-Implementers should also review the security considerations for CWT which are documented in section 8 of [@RFC8392].
+Implementers should also review the security considerations for CWT, which are documented in Section 8 of [@RFC8392].
 
 # IANA Considerations
 
