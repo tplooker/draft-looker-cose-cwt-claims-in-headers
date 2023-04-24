@@ -91,6 +91,12 @@ IANA is requested to register the new COSE Header parameter in the table in (#re
 
 # Document History
 
+-04
+
+* Update author affiliation.
+* Add standard reference to RFC terminology.
+* Added reference to security considerations from RFC8392.
+
 -03
 
 * Added recommendation around header treatment in protected vs unprotected.
