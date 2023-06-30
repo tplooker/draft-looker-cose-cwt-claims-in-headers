@@ -91,10 +91,22 @@ IANA is requested to register the new COSE Header parameter in the table in (#re
 
 {backmatter}
 
+# Acknowledgements {#Acknowledgements}
+
+We would like to thank
+Daisuke Ajitomi,
+Laurence Lundblade,
+Ivaylo Petrov,
+Orie Steele,
+and
+Hannes Tschofenig
+for their valuable contributions to this specification.
+
 # Document History
 
 -05
 
+* Added Acknowledgements section.
 * Addressed WGLC feedback.  Specifically...
 * Added statement about being able to use the header parameter in any COSE object.
 * Moved statment about verifing that claim values present in both the header and payload are identical from the Security Considerations to the body of the specification.
