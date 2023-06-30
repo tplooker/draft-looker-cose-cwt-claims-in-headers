@@ -71,15 +71,17 @@ CWT-Claims = {
 Claim-Label = int / text
 ```
 
+In cases where CWT claims are present both in the payload and the header of a CWT, an application receiving such a structure MUST verify that their values are identical, unless the application defines other specific processing rules for these claims.
+
 It is RECOMMENDED that the CWT claims header parameter is used only in a protected header to avoid the contents being malleable. The header parameter MUST only occur once in either the protected or unprotected header of a COSE structure.
+
+The CWT claims header parameter MAY be used in any COSE object using header parameters, such as COSE_Sign objects.  Its use is not restricted to CWTs.
 
 # Privacy Considerations
 
 Some of the registered CWT claims may contain privacy-sensitive information. Therefore care must be taken when expressing CWT claims in COSE headers.
 
 # Security Considerations
-
-In cases where CWT claims are both present in the payload and the header, an application receiving such a structure MUST verify that their values are identical, unless the application defines other specific processing rules for these claims.
 
 Implementers should also review the security considerations for CWT, which are documented in Section 8 of [@RFC8392].
 
@@ -89,7 +91,25 @@ IANA is requested to register the new COSE Header parameter in the table in (#re
 
 {backmatter}
 
+# Acknowledgements {#Acknowledgements}
+
+We would like to thank
+Daisuke Ajitomi,
+Laurence Lundblade,
+Ivaylo Petrov,
+Orie Steele,
+and
+Hannes Tschofenig
+for their valuable contributions to this specification.
+
 # Document History
+
+-05
+
+* Added Acknowledgements section.
+* Addressed WGLC feedback.  Specifically...
+* Added statement about being able to use the header parameter in any COSE object.
+* Moved statment about verifing that claim values present in both the header and payload are identical from the Security Considerations to the body of the specification.
 
 -04
 
