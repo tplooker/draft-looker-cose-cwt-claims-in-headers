@@ -104,7 +104,7 @@ for their valuable contributions to this specification.
 
 # Document History
 
--05
+-06
 
 * Changed requested IANA COSE Header Parameter assignment number from 11 to 13 due to Countersignature being allocated 11.
 * Reference correct registry IANA COSE Header Parameters.
