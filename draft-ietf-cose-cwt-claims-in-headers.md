@@ -27,7 +27,7 @@ organization = "Mattr"
 initials = "M."
 surname = "Jones"
 fullname = "Michael B. Jones"
-organization = "individual"
+organization = "independent"
   [author.address]
   email = "michael_b_jones@hotmail.com"
   uri = "https://self-issued.info/"
