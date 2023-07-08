@@ -59,7 +59,7 @@ This document defines the following COSE header parameter:
 
 |   Name          |  Label | Value Type | Value Registry |   Description   |
 |-----------------|--------|------------|----------------|-----------------|
-|   CWT claims    |  TBD (requested assignment 11)   | map        | [@!IANA.CWT]   | location for CWT claims in  COSE headers   |
+|   CWT Claims    |  TBD (requested assignment 13)   | map        | [@!IANA.COSE]  | location for CWT Claims in COSE Header Parameters |
 
 The following is a non-normative description for the value type of the CWT claim header parameter using CDDL [@RFC8610].
 
@@ -73,9 +73,9 @@ Claim-Label = int / text
 
 In cases where CWT claims are present both in the payload and the header of a CWT, an application receiving such a structure MUST verify that their values are identical, unless the application defines other specific processing rules for these claims.
 
-It is RECOMMENDED that the CWT claims header parameter is used only in a protected header to avoid the contents being malleable. The header parameter MUST only occur once in either the protected or unprotected header of a COSE structure.
+It is RECOMMENDED that the CWT Claims header parameter is used only in a protected header to avoid the contents being malleable. The header parameter MUST only occur once in either the protected or unprotected header of a COSE structure.
 
-The CWT claims header parameter MAY be used in any COSE object using header parameters, such as COSE_Sign objects.  Its use is not restricted to CWTs.
+The CWT Claims header parameter MAY be used in any COSE object using header parameters, such as COSE_Sign objects.  Its use is not restricted to CWTs.
 
 # Privacy Considerations
 
@@ -87,7 +87,7 @@ Implementers should also review the security considerations for CWT, which are d
 
 # IANA Considerations
 
-IANA is requested to register the new COSE Header parameter in the table in (#representation) in the "COSE Header Parameters" registry [@!IANA.COSE].
+IANA is requested to register the new COSE header parameter "CWT Claims" in the table in (#representation) in the "COSE Header Parameters" registry [@!IANA.COSE].
 
 {backmatter}
 
@@ -103,6 +103,11 @@ Hannes Tschofenig
 for their valuable contributions to this specification.
 
 # Document History
+
+-05
+
+* Changed requested IANA COSE Header Parameter assignment number from 11 to 13 due to Countersignature being allocated 11.
+* Reference correct registry IANA COSE Header Parameters.
 
 -05
 
@@ -136,13 +141,6 @@ for their valuable contributions to this specification.
 <reference anchor="IANA.COSE" target="https://www.iana.org/assignments/cose/cose.xhtml#header-parameters">
  <front>
    <title>COSE Header Parameters</title>
-   <author><organization>IANA</organization></author>
- </front>
-</reference>
-
-<reference anchor="IANA.CWT" target="https://www.iana.org/assignments/cwt/cwt.xhtml">
- <front>
-   <title>CBOR Web Token (CWT) Claims</title>
    <author><organization>IANA</organization></author>
  </front>
 </reference>
