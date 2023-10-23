@@ -27,7 +27,7 @@ organization = "Mattr"
 initials = "M."
 surname = "Jones"
 fullname = "Michael B. Jones"
-organization = "independent"
+organization = "Self-Issued Consulting"
   [author.address]
   email = "michael_b_jones@hotmail.com"
   uri = "https://self-issued.info/"
@@ -42,15 +42,15 @@ This document describes how to include CBOR Web Token (CWT) claims in the header
 
 # Introduction
 
-In some applications of COSE, it is useful to have a standard representation of CWT claims [@RFC8392] available in the header parameters. These include encrypted COSE structures, which may or may not be an encrypted CWT and/or those featuring a detached signature.
+In some applications of COSE, it is useful to have a standard representation of CWT claims [@!RFC8392] available in the header parameters. These include encrypted COSE structures, which may or may not be an encrypted CWT and/or those featuring a detached signature.
 
-Section 5.3 of the JWT RFC [@RFC7519] defined a similar mechanism for expressing selected JWT based claims as JOSE header parameters.  This JWT feature was motivated by the desire to have certain claims, such as the Issuer value, be visible to software processing the JWT, even though the JWT is encrypted.  No corresponding feature was standardized for CWTs, which was an omission that this specification corrects.
+Section 5.3 of JSON Web Token (JWT) [@RFC7519] defined a similar mechanism for expressing selected JWT based claims as JOSE header parameters.  This JWT feature was motivated by the desire to have certain claims, such as the Issuer value, be visible to software processing the JWT, even though the JWT is encrypted.  No corresponding feature was standardized for CWTs, which was an omission that this specification corrects.
 
 Directly including CWT claim values as COSE header parameter values would not work, since there are conflicts between the numeric header parameter assignments and the numeric CWT claim assignments.  Instead, this specification defines a single header parameter registered in the IANA "COSE Header Parameters" registry that creates a location to store CWT claims in a COSE header parameter.
 
 ## Requirements Terminology
 
-The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "NOT RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in BCP 14 [@RFC2119] [@RFC8174] when, and only when, they appear in all capitals, as shown here.
+The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "NOT RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in BCP 14 [@!RFC2119] [@!RFC8174] when, and only when, they appear in all capitals, as shown here.
 
 # Representation
 
@@ -59,7 +59,7 @@ This document defines the following COSE header parameter:
 
 |   Name          |  Label | Value Type | Value Registry |   Description   |
 |-----------------|--------|------------|----------------|-----------------|
-|   CWT Claims    |  TBD (requested assignment 13)   | map        | [@!IANA.COSE]  | location for CWT Claims in COSE Header Parameters |
+|   CWT Claims    |  TBD (requested assignment 15)   | map        | [@!IANA.COSE]  | Location for CWT Claims in COSE Header Parameters |
 
 The following is a non-normative description for the value type of the CWT claim header parameter using CDDL [@RFC8610].
 
@@ -79,11 +79,15 @@ The CWT Claims header parameter MAY be used in any COSE object using header para
 
 # Privacy Considerations
 
-Some of the registered CWT claims may contain privacy-sensitive information. Therefore care must be taken when expressing CWT claims in COSE headers.
+Some of the registered CWT claims may contain privacy-sensitive information. Since CWT claims in COSE headers are not encrypted, when privacy-sensitive information is present in these claims, applications and protocols using them should ensure that these COSE objects are only made visible to parties for which it is appropriate for them to have access to this sensitive information.
 
 # Security Considerations
 
-Implementers should also review the security considerations for CWT, which are documented in Section 8 of [@RFC8392].
+Implementers should also review the security considerations for CWT, which are documented in Section 8 of [@!RFC8392].
+
+As described in [@RFC9052], if the COSE payload is transported separately ("detached content"), then it is the responsibility of the application to ensure that it will be transported without changes.
+
+The reason for applications to verify that CWT claims that are present both in the payload and the header of a CWT are identical, unless it defines other specific processing rules for these claims, is to eliminate potential confusion that might arise by having different values for the same claim, which could result in inconsistent processing of such claims.
 
 # IANA Considerations
 
@@ -95,14 +99,26 @@ IANA is requested to register the new COSE header parameter "CWT Claims" in the 
 
 We would like to thank
 Daisuke Ajitomi,
+Claudio Allocchio,
 Laurence Lundblade,
 Ivaylo Petrov,
+Ines Robles,
 Orie Steele,
+Hannes Tschofenig,
+Paul Wouters,
 and
-Hannes Tschofenig
+Peter Yee
 for their valuable contributions to this specification.
 
 # Document History
+
+-07
+
+* Added Privacy Consideration about unencrypted claims in header parameters.
+* Added Security Consideration about detached content.
+* Added Security Consideration about claims that are present both in the payload and the header of a CWT.
+* Changed requested IANA COSE Header Parameter assignment number from 13 to 15 due to subsequent assignments of 13 and 14.
+* Acknowledged last call reviewers.
 
 -06
 
