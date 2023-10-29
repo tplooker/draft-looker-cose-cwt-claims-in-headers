@@ -1,0 +1,660 @@
+{
+  "magic": "E!vIA5L86J2I",
+  "timestamp": "2023-10-29T00:20:17.915573+00:00",
+  "repo": "tplooker/draft-ietf-cose-cwt-claims-in-headers",
+  "labels": [
+    {
+      "name": "bug",
+      "description": "Something isn't working",
+      "color": "d73a4a"
+    },
+    {
+      "name": "documentation",
+      "description": "Improvements or additions to documentation",
+      "color": "0075ca"
+    },
+    {
+      "name": "duplicate",
+      "description": "This issue or pull request already exists",
+      "color": "cfd3d7"
+    },
+    {
+      "name": "enhancement",
+      "description": "New feature or request",
+      "color": "a2eeef"
+    },
+    {
+      "name": "good first issue",
+      "description": "Good for newcomers",
+      "color": "7057ff"
+    },
+    {
+      "name": "help wanted",
+      "description": "Extra attention is needed",
+      "color": "008672"
+    },
+    {
+      "name": "invalid",
+      "description": "This doesn't seem right",
+      "color": "e4e669"
+    },
+    {
+      "name": "question",
+      "description": "Further information is requested",
+      "color": "d876e3"
+    },
+    {
+      "name": "wontfix",
+      "description": "This will not be worked on",
+      "color": "ffffff"
+    }
+  ],
+  "issues": [],
+  "pulls": [
+    {
+      "number": 1,
+      "id": "PR_kwDOGyRGVs4ztQRU",
+      "title": "Mike's initial contributions",
+      "url": "https://github.com/tplooker/draft-ietf-cose-cwt-claims-in-headers/pull/1",
+      "state": "MERGED",
+      "author": "selfissued",
+      "authorAssociation": "NONE",
+      "assignees": [],
+      "labels": [],
+      "body": "Based on my 28-Feb-22 review of the draft.",
+      "createdAt": "2022-03-01T06:11:20Z",
+      "updatedAt": "2022-03-01T07:08:08Z",
+      "baseRepository": "tplooker/draft-ietf-cose-cwt-claims-in-headers",
+      "baseRefName": "main",
+      "baseRefOid": "56ec4b5aece2b117c75430bf43e0779a93cb0dae",
+      "headRepository": "selfissued/draft-looker-cose-cwt-claims-in-headers",
+      "headRefName": "mbj-initial-contributions",
+      "headRefOid": "a7d4e803d60d8f71e24e50c0d2bc421187a33edc",
+      "closedAt": "2022-03-01T07:08:08Z",
+      "mergedAt": "2022-03-01T07:08:08Z",
+      "mergedBy": "tplooker",
+      "mergeCommit": {
+        "oid": "234a6ae691c149119f094e75d3574497a94ee333"
+      },
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOGyRGVs41ZrIZ",
+          "commit": {
+            "abbreviatedOid": "a7d4e80"
+          },
+          "author": "tplooker",
+          "authorAssociation": "OWNER",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2022-03-01T07:07:56Z",
+          "updatedAt": "2022-03-01T07:07:56Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "id": "PR_kwDOGyRGVs47Ee-G",
+      "title": "Rename draft to reflect cose WG adoption",
+      "url": "https://github.com/tplooker/draft-ietf-cose-cwt-claims-in-headers/pull/2",
+      "state": "MERGED",
+      "author": "tplooker",
+      "authorAssociation": "OWNER",
+      "assignees": [],
+      "labels": [],
+      "body": "As per the title following the formal adoption by the COSE WG this PR updates the draft name to reflect this.",
+      "createdAt": "2022-07-08T00:28:26Z",
+      "updatedAt": "2022-07-09T02:20:09Z",
+      "baseRepository": "tplooker/draft-ietf-cose-cwt-claims-in-headers",
+      "baseRefName": "main",
+      "baseRefOid": "4abc8d17da9cf1829f4b85f3331a789e58dc2eb8",
+      "headRepository": "tplooker/draft-ietf-cose-cwt-claims-in-headers",
+      "headRefName": "tl/rename-draft",
+      "headRefOid": "4f6765e8ab2f131f472fdde8a64662736514a8c5",
+      "closedAt": "2022-07-09T02:20:05Z",
+      "mergedAt": "2022-07-09T02:20:05Z",
+      "mergedBy": "tplooker",
+      "mergeCommit": {
+        "oid": "55b7b084b2433832a5af7a262094f93b3edd6b3b"
+      },
+      "comments": [
+        {
+          "author": "tplooker",
+          "authorAssociation": "OWNER",
+          "body": "@selfissued",
+          "createdAt": "2022-07-08T00:28:34Z",
+          "updatedAt": "2022-07-08T00:28:34Z"
+        }
+      ],
+      "reviews": [
+        {
+          "id": "PRR_kwDOGyRGVs49ifzM",
+          "commit": {
+            "abbreviatedOid": "e659e6f"
+          },
+          "author": "selfissued",
+          "authorAssociation": "NONE",
+          "state": "CHANGES_REQUESTED",
+          "body": "There should be a Document History appendix, with this content:\r\n\r\n-00\r\n\r\n- Created draft-ietf-cose-cwt-claims-in-headers-00 from draft-looker-cose-cwt-claims-in-headers-00 following working group adoption.\r\n\r\n(See https://www.ietf.org/archive/id/draft-ietf-oauth-jwk-thumbprint-uri-03.html#name-document-history for an example of such a Document History section.)",
+          "createdAt": "2022-07-08T06:27:33Z",
+          "updatedAt": "2022-07-08T06:27:33Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "id": "PR_kwDOGyRGVs5CVFLW",
+      "title": "Changed example from Key ID to Issuer",
+      "url": "https://github.com/tplooker/draft-ietf-cose-cwt-claims-in-headers/pull/3",
+      "state": "MERGED",
+      "author": "selfissued",
+      "authorAssociation": "NONE",
+      "assignees": [],
+      "labels": [],
+      "body": "Since Key ID is a Header Parameter - not a Claim.",
+      "createdAt": "2022-11-07T14:03:15Z",
+      "updatedAt": "2022-11-07T20:49:24Z",
+      "baseRepository": "tplooker/draft-ietf-cose-cwt-claims-in-headers",
+      "baseRefName": "main",
+      "baseRefOid": "3f748bf551f02a906b0dda0adb31959cfefc697a",
+      "headRepository": "selfissued/draft-looker-cose-cwt-claims-in-headers",
+      "headRefName": "mbj-issuer-example",
+      "headRefOid": "9a74d3c42d00dc09b43cfbad8e9b779802f031db",
+      "closedAt": "2022-11-07T20:49:24Z",
+      "mergedAt": "2022-11-07T20:49:24Z",
+      "mergedBy": "tplooker",
+      "mergeCommit": {
+        "oid": "ad1d2fa0df707bafa962c40a4a5f8a0cf9e12631"
+      },
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOGyRGVs5FzTO8",
+          "commit": {
+            "abbreviatedOid": "9a74d3c"
+          },
+          "author": "tplooker",
+          "authorAssociation": "OWNER",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2022-11-07T20:49:17Z",
+          "updatedAt": "2022-11-07T20:49:17Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "id": "PR_kwDOGyRGVs5L1K-J",
+      "title": "feat: add cddl definition",
+      "url": "https://github.com/tplooker/draft-ietf-cose-cwt-claims-in-headers/pull/4",
+      "state": "MERGED",
+      "author": "tplooker",
+      "authorAssociation": "OWNER",
+      "assignees": [],
+      "labels": [],
+      "body": "Add a basic CDDL description for the header definition.",
+      "createdAt": "2023-03-12T05:40:06Z",
+      "updatedAt": "2023-03-12T19:42:47Z",
+      "baseRepository": "tplooker/draft-ietf-cose-cwt-claims-in-headers",
+      "baseRefName": "main",
+      "baseRefOid": "ad1d2fa0df707bafa962c40a4a5f8a0cf9e12631",
+      "headRepository": "tplooker/draft-ietf-cose-cwt-claims-in-headers",
+      "headRefName": "tl/cddl",
+      "headRefOid": "1451f11a51ba1b01dedc8d4d5b08070f4d06974a",
+      "closedAt": "2023-03-12T19:42:36Z",
+      "mergedAt": "2023-03-12T19:42:36Z",
+      "mergedBy": "tplooker",
+      "mergeCommit": {
+        "oid": "9e05362d84e4c5cabf4a234e48800a4a4f5aa24b"
+      },
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOGyRGVs5PoT4R",
+          "commit": {
+            "abbreviatedOid": "bc814fa"
+          },
+          "author": "tplooker",
+          "authorAssociation": "OWNER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2023-03-12T05:40:20Z",
+          "updatedAt": "2023-03-12T05:40:21Z",
+          "comments": [
+            {
+              "originalPosition": 4,
+              "body": "```suggestion\r\nThe following is a non-normative description for the value type of the cwt claim header parameter using CDDL [@RFC8610].\r\n```",
+              "createdAt": "2023-03-12T05:40:20Z",
+              "updatedAt": "2023-03-12T05:40:21Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOGyRGVs5PoUCb",
+          "commit": {
+            "abbreviatedOid": "1451f11"
+          },
+          "author": "selfissued",
+          "authorAssociation": "NONE",
+          "state": "APPROVED",
+          "body": "Merge it!",
+          "createdAt": "2023-03-12T05:51:41Z",
+          "updatedAt": "2023-03-12T05:51:41Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "id": "PR_kwDOGyRGVs5L2AcH",
+      "title": "fix: add recommendation around header treatment",
+      "url": "https://github.com/tplooker/draft-ietf-cose-cwt-claims-in-headers/pull/5",
+      "state": "MERGED",
+      "author": "tplooker",
+      "authorAssociation": "OWNER",
+      "assignees": [],
+      "labels": [],
+      "body": "Adds recommendation for the header parameter to only appear in the protected header and guidance for what to do w.r.t duplication across protected and unprotected headers.",
+      "createdAt": "2023-03-12T21:58:57Z",
+      "updatedAt": "2023-03-12T23:59:36Z",
+      "baseRepository": "tplooker/draft-ietf-cose-cwt-claims-in-headers",
+      "baseRefName": "main",
+      "baseRefOid": "016a4b6320228df48cd47748e370d5c187b7075f",
+      "headRepository": "tplooker/draft-ietf-cose-cwt-claims-in-headers",
+      "headRefName": "tl/protected-header",
+      "headRefOid": "a5d689b75801459b310025f8250c8daa22f2df5a",
+      "closedAt": "2023-03-12T23:59:14Z",
+      "mergedAt": "2023-03-12T23:59:14Z",
+      "mergedBy": "tplooker",
+      "mergeCommit": {
+        "oid": "49cbed69d06754f901e045d812d113e6c33e029f"
+      },
+      "comments": [
+        {
+          "author": "selfissued",
+          "authorAssociation": "NONE",
+          "body": "Please also add a history entry for -03.",
+          "createdAt": "2023-03-12T22:08:11Z",
+          "updatedAt": "2023-03-12T22:08:11Z"
+        }
+      ],
+      "reviews": [
+        {
+          "id": "PRR_kwDOGyRGVs5PoyY0",
+          "commit": {
+            "abbreviatedOid": "c3fd8d6"
+          },
+          "author": "selfissued",
+          "authorAssociation": "NONE",
+          "state": "CHANGES_REQUESTED",
+          "body": "",
+          "createdAt": "2023-03-12T22:07:18Z",
+          "updatedAt": "2023-03-12T22:07:31Z",
+          "comments": [
+            {
+              "originalPosition": 4,
+              "body": "cwt -> CWT (and do this everywhere else in the draft that it's currently lowercase)",
+              "createdAt": "2023-03-12T22:07:18Z",
+              "updatedAt": "2023-03-12T22:07:31Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOGyRGVs5Po02J",
+          "commit": {
+            "abbreviatedOid": "ad09791"
+          },
+          "author": "tplooker",
+          "authorAssociation": "OWNER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2023-03-12T23:19:28Z",
+          "updatedAt": "2023-03-12T23:19:28Z",
+          "comments": [
+            {
+              "originalPosition": 16,
+              "body": "```suggestion\r\nIt is RECOMMENDED that the CWT claims header parameter is used only in a protected header to avoid the contents being malleable. The header parameter MUST only occur once in either the protected or unprotected header of a COSE structure.\r\n```",
+              "createdAt": "2023-03-12T23:19:28Z",
+              "updatedAt": "2023-03-12T23:19:28Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOGyRGVs5Po03j",
+          "commit": {
+            "abbreviatedOid": "76a4c2c"
+          },
+          "author": "tplooker",
+          "authorAssociation": "OWNER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2023-03-12T23:19:59Z",
+          "updatedAt": "2023-03-12T23:20:00Z",
+          "comments": [
+            {
+              "originalPosition": 27,
+              "body": "```suggestion\r\n* Added recommendation around header treatment in protected vs unprotected.\r\n```",
+              "createdAt": "2023-03-12T23:19:59Z",
+              "updatedAt": "2023-03-12T23:20:00Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOGyRGVs5Po1dT",
+          "commit": {
+            "abbreviatedOid": "a5d689b"
+          },
+          "author": "selfissued",
+          "authorAssociation": "NONE",
+          "state": "APPROVED",
+          "body": "Merge and publish!",
+          "createdAt": "2023-03-12T23:35:18Z",
+          "updatedAt": "2023-03-12T23:35:18Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "id": "PR_kwDOGyRGVs5O6wDm",
+      "title": "Address Ivaylo review",
+      "url": "https://github.com/tplooker/draft-ietf-cose-cwt-claims-in-headers/pull/6",
+      "state": "MERGED",
+      "author": "tplooker",
+      "authorAssociation": "OWNER",
+      "assignees": [],
+      "labels": [],
+      "body": "Addresses review from COSE WG chair sent to the list on 6th of April post IETF 116.",
+      "createdAt": "2023-04-22T15:51:12Z",
+      "updatedAt": "2023-04-23T03:06:18Z",
+      "baseRepository": "tplooker/draft-ietf-cose-cwt-claims-in-headers",
+      "baseRefName": "main",
+      "baseRefOid": "49cbed69d06754f901e045d812d113e6c33e029f",
+      "headRepository": "tplooker/draft-ietf-cose-cwt-claims-in-headers",
+      "headRefName": "tl/ivaylo-review",
+      "headRefOid": "47d341852ec932eca5ac07bc89efbd950ca383e0",
+      "closedAt": "2023-04-23T03:00:05Z",
+      "mergedAt": "2023-04-23T03:00:05Z",
+      "mergedBy": "tplooker",
+      "mergeCommit": {
+        "oid": "84e94af102bb693ee700a84e4b6b132a655bc3ec"
+      },
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOGyRGVs5TQRl7",
+          "commit": {
+            "abbreviatedOid": "264884e"
+          },
+          "author": "selfissued",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2023-04-22T19:48:08Z",
+          "updatedAt": "2023-04-22T19:48:09Z",
+          "comments": [
+            {
+              "originalPosition": 18,
+              "body": "Add a comma before \"which\".\r\nsection -> Section",
+              "createdAt": "2023-04-22T19:48:09Z",
+              "updatedAt": "2023-04-22T19:48:09Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOGyRGVs5TQR2g",
+          "commit": {
+            "abbreviatedOid": "264884e"
+          },
+          "author": "selfissued",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "Please also add a history entry for -04.",
+          "createdAt": "2023-04-22T20:01:17Z",
+          "updatedAt": "2023-04-22T20:01:17Z",
+          "comments": []
+        },
+        {
+          "id": "PRR_kwDOGyRGVs5TQej2",
+          "commit": {
+            "abbreviatedOid": "264884e"
+          },
+          "author": "tplooker",
+          "authorAssociation": "OWNER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2023-04-23T02:59:46Z",
+          "updatedAt": "2023-04-23T02:59:47Z",
+          "comments": [
+            {
+              "originalPosition": 18,
+              "body": "```suggestion\r\nImplementers should also review the security considerations for CWT, which are documented in Section 8 of [@RFC8392].\r\n```",
+              "createdAt": "2023-04-23T02:59:47Z",
+              "updatedAt": "2023-04-23T02:59:47Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "id": "PR_kwDOGyRGVs5O7B8d",
+      "title": "Change Mike's affiliation",
+      "url": "https://github.com/tplooker/draft-ietf-cose-cwt-claims-in-headers/pull/7",
+      "state": "MERGED",
+      "author": "selfissued",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2023-04-22T20:03:18Z",
+      "updatedAt": "2023-04-23T03:00:34Z",
+      "baseRepository": "tplooker/draft-ietf-cose-cwt-claims-in-headers",
+      "baseRefName": "main",
+      "baseRefOid": "49cbed69d06754f901e045d812d113e6c33e029f",
+      "headRepository": "selfissued/draft-ietf-cose-cwt-claims-in-headers",
+      "headRefName": "mbj-affiliation",
+      "headRefOid": "eaded71b1cceae2eeec75399e3de56b4cc98f1cb",
+      "closedAt": "2023-04-23T03:00:34Z",
+      "mergedAt": "2023-04-23T03:00:34Z",
+      "mergedBy": "tplooker",
+      "mergeCommit": {
+        "oid": "825dd1dba380aa430034e1a3e1dca85f453113f0"
+      },
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOGyRGVs5TQekm",
+          "commit": {
+            "abbreviatedOid": "eaded71"
+          },
+          "author": "tplooker",
+          "authorAssociation": "OWNER",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2023-04-23T03:00:29Z",
+          "updatedAt": "2023-04-23T03:00:29Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "id": "PR_kwDOGyRGVs5O7oEb",
+      "title": "Update doc history for draft-04",
+      "url": "https://github.com/tplooker/draft-ietf-cose-cwt-claims-in-headers/pull/8",
+      "state": "MERGED",
+      "author": "tplooker",
+      "authorAssociation": "OWNER",
+      "assignees": [],
+      "labels": [],
+      "body": "As described in title, updates doc history in preparation for publishing draft-04",
+      "createdAt": "2023-04-23T05:46:59Z",
+      "updatedAt": "2023-04-24T00:29:18Z",
+      "baseRepository": "tplooker/draft-ietf-cose-cwt-claims-in-headers",
+      "baseRefName": "main",
+      "baseRefOid": "825dd1dba380aa430034e1a3e1dca85f453113f0",
+      "headRepository": "tplooker/draft-ietf-cose-cwt-claims-in-headers",
+      "headRefName": "tl/update-doc-history",
+      "headRefOid": "4c808aa82d015df18e5e0c2eea1101f59e04756f",
+      "closedAt": "2023-04-24T00:29:15Z",
+      "mergedAt": "2023-04-24T00:29:15Z",
+      "mergedBy": "tplooker",
+      "mergeCommit": {
+        "oid": "8d09ea710e2eed06cff35ef1f0b95aa80fe27f12"
+      },
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOGyRGVs5TQ6C-",
+          "commit": {
+            "abbreviatedOid": "4c808aa"
+          },
+          "author": "selfissued",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "APPROVED",
+          "body": "Thanks!  Ready to publish.",
+          "createdAt": "2023-04-23T17:31:43Z",
+          "updatedAt": "2023-04-23T17:31:43Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "id": "PR_kwDOGyRGVs5USRrb",
+      "title": "Address WGLC feedback",
+      "url": "https://github.com/tplooker/draft-ietf-cose-cwt-claims-in-headers/pull/9",
+      "state": "MERGED",
+      "author": "selfissued",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2023-06-30T00:05:11Z",
+      "updatedAt": "2023-06-30T02:47:55Z",
+      "baseRepository": "tplooker/draft-ietf-cose-cwt-claims-in-headers",
+      "baseRefName": "main",
+      "baseRefOid": "8d09ea710e2eed06cff35ef1f0b95aa80fe27f12",
+      "headRepository": "selfissued/draft-ietf-cose-cwt-claims-in-headers",
+      "headRefName": "mbj-address-wglc-feedback",
+      "headRefOid": "89e67f7ee4cbababe30a0424510a614424f62d25",
+      "closedAt": "2023-06-30T02:47:54Z",
+      "mergedAt": "2023-06-30T02:47:54Z",
+      "mergedBy": "tplooker",
+      "mergeCommit": {
+        "oid": "9578fb1c3a389f6563d7534998088153d92c553c"
+      },
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOGyRGVs5ZybA1",
+          "commit": {
+            "abbreviatedOid": "89e67f7"
+          },
+          "author": "tplooker",
+          "authorAssociation": "OWNER",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2023-06-30T02:47:41Z",
+          "updatedAt": "2023-06-30T02:47:41Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "id": "PR_kwDOGyRGVs5U_vW3",
+      "title": "Changed requested assignment to 13",
+      "url": "https://github.com/tplooker/draft-ietf-cose-cwt-claims-in-headers/pull/10",
+      "state": "MERGED",
+      "author": "selfissued",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2023-07-08T16:46:53Z",
+      "updatedAt": "2023-07-08T21:35:37Z",
+      "baseRepository": "tplooker/draft-ietf-cose-cwt-claims-in-headers",
+      "baseRefName": "main",
+      "baseRefOid": "9578fb1c3a389f6563d7534998088153d92c553c",
+      "headRepository": "selfissued/draft-ietf-cose-cwt-claims-in-headers",
+      "headRefName": "mbj-iana-assignment-13",
+      "headRefOid": "5140b5582fcd9dd11c0fe1ed1171118132fae81d",
+      "closedAt": "2023-07-08T21:35:37Z",
+      "mergedAt": "2023-07-08T21:35:37Z",
+      "mergedBy": "tplooker",
+      "mergeCommit": {
+        "oid": "48962b5d5c6491591bebbc476fd8d3101fa9a4e8"
+      },
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOGyRGVs5apaTa",
+          "commit": {
+            "abbreviatedOid": "8f55fd0"
+          },
+          "author": "tplooker",
+          "authorAssociation": "OWNER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2023-07-08T21:32:24Z",
+          "updatedAt": "2023-07-08T21:32:25Z",
+          "comments": [
+            {
+              "originalPosition": 32,
+              "body": "```suggestion\r\n-06\r\n```",
+              "createdAt": "2023-07-08T21:32:24Z",
+              "updatedAt": "2023-07-08T21:32:25Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "id": "PR_kwDOGyRGVs5dcymA",
+      "title": "Addressed IETF Last Call comments",
+      "url": "https://github.com/tplooker/draft-ietf-cose-cwt-claims-in-headers/pull/11",
+      "state": "MERGED",
+      "author": "selfissued",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Prepares us for the IESG telechat review",
+      "createdAt": "2023-10-21T17:23:02Z",
+      "updatedAt": "2023-10-23T00:46:21Z",
+      "baseRepository": "tplooker/draft-ietf-cose-cwt-claims-in-headers",
+      "baseRefName": "main",
+      "baseRefOid": "25929a5ad953f7c5add138b71c001dd8b26e4d63",
+      "headRepository": "selfissued/draft-ietf-cose-cwt-claims-in-headers",
+      "headRefName": "mbj-last-call",
+      "headRefOid": "b469e521b3d40f1b1c5d4892cf74be8f89de780b",
+      "closedAt": "2023-10-23T00:46:21Z",
+      "mergedAt": "2023-10-23T00:46:21Z",
+      "mergedBy": "tplooker",
+      "mergeCommit": {
+        "oid": "3f3462b54953a111b317b90ed67acae445c792f1"
+      },
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOGyRGVs5k0wqr",
+          "commit": {
+            "abbreviatedOid": "b469e52"
+          },
+          "author": "tplooker",
+          "authorAssociation": "OWNER",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2023-10-23T00:46:16Z",
+          "updatedAt": "2023-10-23T00:46:16Z",
+          "comments": []
+        }
+      ]
+    }
+  ]
+}
