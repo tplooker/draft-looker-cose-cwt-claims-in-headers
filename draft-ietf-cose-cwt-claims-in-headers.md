@@ -89,6 +89,8 @@ As described in [@RFC9052], if the COSE payload is transported separately ("deta
 
 The reason for applications to verify that CWT claims that are present both in the payload and the header of a CWT are identical, unless it defines other specific processing rules for these claims, is to eliminate potential confusion that might arise by having different values for the same claim, which could result in inconsistent processing of such claims.
 
+Profiles define how to use CWT claims for particular applications, whether they are in the COSE payload or the CWT Claims header parameter, or both.  Therefore, understanding how to process the CWT Claims requires unambiguously knowing the profile being used.  A recommended way to include this information in the COSE structure is use of the `typ` (type) Header Parameter [@I-D.ietf-cose-typ-header-parameter].  Other methods for determining the profile can also be used.
+
 # IANA Considerations
 
 IANA is requested to register the new COSE header parameter "CWT Claims" in the table in (#representation) in the "COSE Header Parameters" registry [@!IANA.COSE].
@@ -100,6 +102,7 @@ IANA is requested to register the new COSE header parameter "CWT Claims" in the 
 We would like to thank
 Daisuke Ajitomi,
 Claudio Allocchio,
+Carsten Bormann,
 Laurence Lundblade,
 Ivaylo Petrov,
 Ines Robles,
@@ -111,6 +114,10 @@ Peter Yee
 for their valuable contributions to this specification.
 
 # Document History
+
+-08
+
+* Added Security Consideration about profiles and processing CWT claims.
 
 -07
 
