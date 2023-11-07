@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2023-11-05T00:20:49.447767+00:00",
+  "timestamp": "2023-11-07T00:19:22.266851+00:00",
   "repo": "tplooker/draft-ietf-cose-cwt-claims-in-headers",
   "labels": [
     {
@@ -58,7 +58,7 @@
       "url": "https://github.com/tplooker/draft-ietf-cose-cwt-claims-in-headers/pull/1",
       "state": "MERGED",
       "author": "selfissued",
-      "authorAssociation": "NONE",
+      "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
       "body": "Based on my 28-Feb-22 review of the draft.",
@@ -67,7 +67,7 @@
       "baseRepository": "tplooker/draft-ietf-cose-cwt-claims-in-headers",
       "baseRefName": "main",
       "baseRefOid": "56ec4b5aece2b117c75430bf43e0779a93cb0dae",
-      "headRepository": "selfissued/draft-looker-cose-cwt-claims-in-headers",
+      "headRepository": "selfissued/draft-ietf-cose-cwt-claims-in-headers",
       "headRefName": "mbj-initial-contributions",
       "headRefOid": "a7d4e803d60d8f71e24e50c0d2bc421187a33edc",
       "closedAt": "2022-03-01T07:08:08Z",
@@ -134,7 +134,7 @@
             "abbreviatedOid": "e659e6f"
           },
           "author": "selfissued",
-          "authorAssociation": "NONE",
+          "authorAssociation": "COLLABORATOR",
           "state": "CHANGES_REQUESTED",
           "body": "There should be a Document History appendix, with this content:\r\n\r\n-00\r\n\r\n- Created draft-ietf-cose-cwt-claims-in-headers-00 from draft-looker-cose-cwt-claims-in-headers-00 following working group adoption.\r\n\r\n(See https://www.ietf.org/archive/id/draft-ietf-oauth-jwk-thumbprint-uri-03.html#name-document-history for an example of such a Document History section.)",
           "createdAt": "2022-07-08T06:27:33Z",
@@ -150,7 +150,7 @@
       "url": "https://github.com/tplooker/draft-ietf-cose-cwt-claims-in-headers/pull/3",
       "state": "MERGED",
       "author": "selfissued",
-      "authorAssociation": "NONE",
+      "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
       "body": "Since Key ID is a Header Parameter - not a Claim.",
@@ -159,7 +159,7 @@
       "baseRepository": "tplooker/draft-ietf-cose-cwt-claims-in-headers",
       "baseRefName": "main",
       "baseRefOid": "3f748bf551f02a906b0dda0adb31959cfefc697a",
-      "headRepository": "selfissued/draft-looker-cose-cwt-claims-in-headers",
+      "headRepository": "selfissued/draft-ietf-cose-cwt-claims-in-headers",
       "headRefName": "mbj-issuer-example",
       "headRefOid": "9a74d3c42d00dc09b43cfbad8e9b779802f031db",
       "closedAt": "2022-11-07T20:49:24Z",
@@ -238,7 +238,7 @@
             "abbreviatedOid": "1451f11"
           },
           "author": "selfissued",
-          "authorAssociation": "NONE",
+          "authorAssociation": "COLLABORATOR",
           "state": "APPROVED",
           "body": "Merge it!",
           "createdAt": "2023-03-12T05:51:41Z",
@@ -275,7 +275,7 @@
       "comments": [
         {
           "author": "selfissued",
-          "authorAssociation": "NONE",
+          "authorAssociation": "COLLABORATOR",
           "body": "Please also add a history entry for -03.",
           "createdAt": "2023-03-12T22:08:11Z",
           "updatedAt": "2023-03-12T22:08:11Z"
@@ -288,7 +288,7 @@
             "abbreviatedOid": "c3fd8d6"
           },
           "author": "selfissued",
-          "authorAssociation": "NONE",
+          "authorAssociation": "COLLABORATOR",
           "state": "CHANGES_REQUESTED",
           "body": "",
           "createdAt": "2023-03-12T22:07:18Z",
@@ -348,7 +348,7 @@
             "abbreviatedOid": "a5d689b"
           },
           "author": "selfissued",
-          "authorAssociation": "NONE",
+          "authorAssociation": "COLLABORATOR",
           "state": "APPROVED",
           "body": "Merge and publish!",
           "createdAt": "2023-03-12T23:35:18Z",
@@ -390,7 +390,7 @@
             "abbreviatedOid": "264884e"
           },
           "author": "selfissued",
-          "authorAssociation": "CONTRIBUTOR",
+          "authorAssociation": "COLLABORATOR",
           "state": "COMMENTED",
           "body": "",
           "createdAt": "2023-04-22T19:48:08Z",
@@ -410,7 +410,7 @@
             "abbreviatedOid": "264884e"
           },
           "author": "selfissued",
-          "authorAssociation": "CONTRIBUTOR",
+          "authorAssociation": "COLLABORATOR",
           "state": "COMMENTED",
           "body": "Please also add a history entry for -04.",
           "createdAt": "2023-04-22T20:01:17Z",
@@ -446,7 +446,7 @@
       "url": "https://github.com/tplooker/draft-ietf-cose-cwt-claims-in-headers/pull/7",
       "state": "MERGED",
       "author": "selfissued",
-      "authorAssociation": "CONTRIBUTOR",
+      "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
       "body": "",
@@ -514,7 +514,7 @@
             "abbreviatedOid": "4c808aa"
           },
           "author": "selfissued",
-          "authorAssociation": "CONTRIBUTOR",
+          "authorAssociation": "COLLABORATOR",
           "state": "APPROVED",
           "body": "Thanks!  Ready to publish.",
           "createdAt": "2023-04-23T17:31:43Z",
@@ -530,7 +530,7 @@
       "url": "https://github.com/tplooker/draft-ietf-cose-cwt-claims-in-headers/pull/9",
       "state": "MERGED",
       "author": "selfissued",
-      "authorAssociation": "CONTRIBUTOR",
+      "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
       "body": "",
@@ -652,6 +652,46 @@
           "body": "",
           "createdAt": "2023-10-23T00:46:16Z",
           "updatedAt": "2023-10-23T00:46:16Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "id": "PR_kwDOGyRGVs5eq7sT",
+      "title": "Added Security Consideration about profiles and processing CWT claims",
+      "url": "https://github.com/tplooker/draft-ietf-cose-cwt-claims-in-headers/pull/12",
+      "state": "OPEN",
+      "author": "selfissued",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Applied suggestions by Carsten Bormann.",
+      "createdAt": "2023-11-06T10:38:44Z",
+      "updatedAt": "2023-11-06T11:35:53Z",
+      "baseRepository": "tplooker/draft-ietf-cose-cwt-claims-in-headers",
+      "baseRefName": "main",
+      "baseRefOid": "3f3462b54953a111b317b90ed67acae445c792f1",
+      "headRepository": "selfissued/draft-ietf-cose-cwt-claims-in-headers",
+      "headRefName": "mbj-profiles",
+      "headRefOid": "5d122969fde1d0d6bb98bce161867205176a94ed",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOGyRGVs5mN4th",
+          "commit": {
+            "abbreviatedOid": "5d12296"
+          },
+          "author": "OR13",
+          "authorAssociation": "NONE",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2023-11-06T11:35:53Z",
+          "updatedAt": "2023-11-06T11:35:53Z",
           "comments": []
         }
       ]
