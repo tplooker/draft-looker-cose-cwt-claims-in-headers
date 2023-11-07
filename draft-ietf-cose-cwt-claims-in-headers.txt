@@ -5,8 +5,8 @@
 COSE                                                           T. Looker
 Internet-Draft                                                     Mattr
 Intended status: Standards Track                                M. Jones
-Expires: 25 April 2024                            Self-Issued Consulting
-                                                         23 October 2023
+Expires: 10 May 2024                              Self-Issued Consulting
+                                                         7 November 2023
 
 
               CBOR Web Token (CWT) Claims in COSE Headers
@@ -44,7 +44,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 25 April 2024.
+   This Internet-Draft will expire on 10 May 2024.
 
 Copyright Notice
 
@@ -68,8 +68,9 @@ Table of Contents
    3.  Privacy Considerations
    4.  Security Considerations
    5.  IANA Considerations
-   6.  Normative References
-   7.  Informative References
+   6.  References
+     6.1.  Normative References
+     6.2.  Informative References
    Appendix A.  Acknowledgements
    Appendix B.  Document History
    Authors' Addresses
@@ -169,13 +170,24 @@ Table of Contents
    different values for the same claim, which could result in
    inconsistent processing of such claims.
 
+   Profiles define how to use CWT claims for particular applications,
+   whether they are in the COSE payload or the CWT Claims header
+   parameter, or both.  Therefore, understanding how to process the CWT
+   Claims requires unambiguously knowing the profile being used.  A
+   recommended way to include this information in the COSE structure is
+   use of the typ (type) Header Parameter
+   [I-D.ietf-cose-typ-header-parameter].  Other methods for determining
+   the profile can also be used.
+
 5.  IANA Considerations
 
    IANA is requested to register the new COSE header parameter "CWT
    Claims" in the table in Section 2 in the "COSE Header Parameters"
    registry [IANA.COSE].
 
-6.  Normative References
+6.  References
+
+6.1.  Normative References
 
    [IANA.COSE]
               IANA, "COSE Header Parameters",
@@ -195,7 +207,14 @@ Table of Contents
               "CBOR Web Token (CWT)", RFC 8392, DOI 10.17487/RFC8392,
               May 2018, <https://www.rfc-editor.org/info/rfc8392>.
 
-7.  Informative References
+6.2.  Informative References
+
+   [I-D.ietf-cose-typ-header-parameter]
+              Jones, M. B. and O. Steele, "COSE "typ" (type) Header
+              Parameter", Work in Progress, Internet-Draft, draft-ietf-
+              cose-typ-header-parameter-01, 6 November 2023,
+              <https://datatracker.ietf.org/api/v1/doc/document/draft-
+              ietf-cose-typ-header-parameter/>.
 
    [RFC7519]  Jones, M., Bradley, J., and N. Sakimura, "JSON Web Token
               (JWT)", RFC 7519, DOI 10.17487/RFC7519, May 2015,
@@ -214,44 +233,41 @@ Table of Contents
 
 Appendix A.  Acknowledgements
 
-   We would like to thank Daisuke Ajitomi, Claudio Allocchio, Laurence
-   Lundblade, Ivaylo Petrov, Ines Robles, Orie Steele, Hannes
-   Tschofenig, Paul Wouters, and Peter Yee for their valuable
+   We would like to thank Daisuke Ajitomi, Claudio Allocchio, Carsten
+   Bormann, Laurence Lundblade, Ivaylo Petrov, Ines Robles, Orie Steele,
+   Hannes Tschofenig, Paul Wouters, and Peter Yee for their valuable
    contributions to this specification.
 
 Appendix B.  Document History
+
+   -08
+
+   *  Added Security Consideration about profiles and processing CWT
+      claims.
 
    -07
 
    *  Added Privacy Consideration about unencrypted claims in header
       parameters.
-
    *  Added Security Consideration about detached content.
-
    *  Added Security Consideration about claims that are present both in
       the payload and the header of a CWT.
-
    *  Changed requested IANA COSE Header Parameter assignment number
       from 13 to 15 due to subsequent assignments of 13 and 14.
-
    *  Acknowledged last call reviewers.
 
    -06
 
    *  Changed requested IANA COSE Header Parameter assignment number
       from 11 to 13 due to Countersignature being allocated 11.
-
    *  Reference correct registry IANA COSE Header Parameters.
 
    -05
 
    *  Added Acknowledgements section.
-
    *  Addressed WGLC feedback.  Specifically...
-
    *  Added statement about being able to use the header parameter in
       any COSE object.
-
    *  Moved statment about verifing that claim values present in both
       the header and payload are identical from the Security
       Considerations to the body of the specification.
@@ -259,9 +275,7 @@ Appendix B.  Document History
    -04
 
    *  Update author affiliation.
-
    *  Add standard reference to RFC terminology.
-
    *  Added reference to security considerations from RFC8392.
 
    -03
