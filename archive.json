@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2023-11-07T00:19:22.266851+00:00",
+  "timestamp": "2023-11-09T00:19:00.177578+00:00",
   "repo": "tplooker/draft-ietf-cose-cwt-claims-in-headers",
   "labels": [
     {
@@ -661,24 +661,26 @@
       "id": "PR_kwDOGyRGVs5eq7sT",
       "title": "Added Security Consideration about profiles and processing CWT claims",
       "url": "https://github.com/tplooker/draft-ietf-cose-cwt-claims-in-headers/pull/12",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "selfissued",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
       "body": "Applied suggestions by Carsten Bormann.",
       "createdAt": "2023-11-06T10:38:44Z",
-      "updatedAt": "2023-11-06T11:35:53Z",
+      "updatedAt": "2023-11-07T09:28:39Z",
       "baseRepository": "tplooker/draft-ietf-cose-cwt-claims-in-headers",
       "baseRefName": "main",
       "baseRefOid": "3f3462b54953a111b317b90ed67acae445c792f1",
       "headRepository": "selfissued/draft-ietf-cose-cwt-claims-in-headers",
       "headRefName": "mbj-profiles",
       "headRefOid": "5d122969fde1d0d6bb98bce161867205176a94ed",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "closedAt": "2023-11-07T09:28:39Z",
+      "mergedAt": "2023-11-07T09:28:39Z",
+      "mergedBy": "selfissued",
+      "mergeCommit": {
+        "oid": "21af7e6b03749dea466aee9dd8d3c088bce5e0d8"
+      },
       "comments": [],
       "reviews": [
         {
