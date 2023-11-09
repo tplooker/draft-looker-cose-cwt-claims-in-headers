@@ -121,8 +121,8 @@ for their valuable contributions to this specification.
 
 -09
 
-* Described use cases where CWT claims can't be put in the payload.
-* Said that profiles specify the semantics of the CWT claims.
+* Described use cases where CWT claims can't be put in the payload in response to Hannes Tschofenig's IotDir review.
+* Said that profiles specify the semantics of the CWT claims in response to Carsten Bormann's feedback.
 
 -08
 
