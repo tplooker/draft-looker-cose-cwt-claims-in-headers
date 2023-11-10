@@ -8,7 +8,8 @@
 <meta content="Tobias Looker" name="author">
 <meta content="Michael B. Jones" name="author">
 <meta content="
-       This document describes how to include CBOR Web Token (CWT) claims in the header parameters of any COSE structure. This functionality helps to facilitate applications that wish to make use of CBOR Web Token (CWT) claims in encrypted COSE structures and/or COSE structures featuring detached signatures, while having some of those claims be available before decryption and/or without inspecting the detached payload. 
+       This document describes how to include CBOR Web Token (CWT) claims in the header parameters of any COSE structure. This functionality helps to facilitate applications that wish to make use of CBOR Web Token (CWT) claims in encrypted COSE structures and/or COSE structures featuring detached signatures, while having some of those claims be available before decryption and/or without inspecting the detached payload.
+Another use case is using CWT claims with payloads that are not CWT Claims Sets, including payloads that are not CBOR at all. 
     " name="description">
 <meta content="xml2rfc 3.18.2" name="generator">
 <meta content="COSE" name="keyword">
@@ -1031,7 +1032,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
 </tr></thead>
 <tfoot><tr>
 <td class="left">Looker &amp; Jones</td>
-<td class="center">Expires 10 May 2024</td>
+<td class="center">Expires 13 May 2024</td>
 <td class="right">[Page]</td>
 </tr></tfoot>
 </table>
@@ -1044,12 +1045,12 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <dd class="internet-draft">draft-ietf-cose-cwt-claims-in-headers-latest</dd>
 <dt class="label-published">Published:</dt>
 <dd class="published">
-<time datetime="2023-11-07" class="published">7 November 2023</time>
+<time datetime="2023-11-10" class="published">10 November 2023</time>
     </dd>
 <dt class="label-intended-status">Intended Status:</dt>
 <dd class="intended-status">Standards Track</dd>
 <dt class="label-expires">Expires:</dt>
-<dd class="expires"><time datetime="2024-05-10">10 May 2024</time></dd>
+<dd class="expires"><time datetime="2024-05-13">13 May 2024</time></dd>
 <dt class="label-authors">Authors:</dt>
 <dd class="authors">
 <div class="author">
@@ -1066,7 +1067,8 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <h1 id="title">CBOR Web Token (CWT) Claims in COSE Headers</h1>
 <section id="section-abstract">
       <h2 id="abstract"><a href="#abstract" class="selfRef">Abstract</a></h2>
-<p id="section-abstract-1">This document describes how to include CBOR Web Token (CWT) claims in the header parameters of any COSE structure. This functionality helps to facilitate applications that wish to make use of CBOR Web Token (CWT) claims in encrypted COSE structures and/or COSE structures featuring detached signatures, while having some of those claims be available before decryption and/or without inspecting the detached payload.<a href="#section-abstract-1" class="pilcrow">¶</a></p>
+<p id="section-abstract-1">This document describes how to include CBOR Web Token (CWT) claims in the header parameters of any COSE structure. This functionality helps to facilitate applications that wish to make use of CBOR Web Token (CWT) claims in encrypted COSE structures and/or COSE structures featuring detached signatures, while having some of those claims be available before decryption and/or without inspecting the detached payload.
+Another use case is using CWT claims with payloads that are not CWT Claims Sets, including payloads that are not CBOR at all.<a href="#section-abstract-1" class="pilcrow">¶</a></p>
 </section>
 <section class="note rfcEditorRemove" id="section-note.1">
       <h2 id="name-discussion-venues">
@@ -1095,7 +1097,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
         time. It is inappropriate to use Internet-Drafts as reference
         material or to cite them other than as "work in progress."<a href="#section-boilerplate.1-3" class="pilcrow">¶</a></p>
 <p id="section-boilerplate.1-4">
-        This Internet-Draft will expire on 10 May 2024.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
+        This Internet-Draft will expire on 13 May 2024.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="copyright">
@@ -1173,7 +1175,10 @@ svg :is([fill="white"], [fill^="#fff"]) {
       <h2 id="name-introduction">
 <a href="#section-1" class="section-number selfRef">1. </a><a href="#name-introduction" class="section-name selfRef">Introduction</a>
       </h2>
-<p id="section-1-1">In some applications of COSE, it is useful to have a standard representation of CWT claims <span>[<a href="#RFC8392" class="cite xref">RFC8392</a>]</span> available in the header parameters. These include encrypted COSE structures, which may or may not be an encrypted CWT and/or those featuring a detached signature.<a href="#section-1-1" class="pilcrow">¶</a></p>
+<p id="section-1-1">In some applications of COSE, it is useful to have a standard representation of CWT claims <span>[<a href="#RFC8392" class="cite xref">RFC8392</a>]</span> available in the header parameters. These include encrypted COSE structures, which may or may not be an encrypted CWT and/or those featuring a detached signature.
+Another use case is using CWT claims with payloads that are not CWT Claims Sets, including payloads that are not CBOR at all.
+For instance, an application might want to include an "iss" (issuer) claim in a COSE_Sign1 structure
+when the payload being signed is a non-CBOR data structure, such as a bitmap image, and the issuer value is used for key discovery.<a href="#section-1-1" class="pilcrow">¶</a></p>
 <p id="section-1-2">Section 5.3 of JSON Web Token (JWT) <span>[<a href="#RFC7519" class="cite xref">RFC7519</a>]</span> defined a similar mechanism for expressing selected JWT based claims as JOSE header parameters.  This JWT feature was motivated by the desire to have certain claims, such as the Issuer value, be visible to software processing the JWT, even though the JWT is encrypted.  No corresponding feature was standardized for CWTs, which was an omission that this specification corrects.<a href="#section-1-2" class="pilcrow">¶</a></p>
 <p id="section-1-3">Directly including CWT claim values as COSE header parameter values would not work, since there are conflicts between the numeric header parameter assignments and the numeric CWT claim assignments.  Instead, this specification defines a single header parameter registered in the IANA "COSE Header Parameters" registry that creates a location to store CWT claims in a COSE header parameter.<a href="#section-1-3" class="pilcrow">¶</a></p>
 <div id="requirements-terminology">
@@ -1246,7 +1251,10 @@ Claim-Label = int / text
 <p id="section-4-1">Implementers should also review the security considerations for CWT, which are documented in Section 8 of <span>[<a href="#RFC8392" class="cite xref">RFC8392</a>]</span>.<a href="#section-4-1" class="pilcrow">¶</a></p>
 <p id="section-4-2">As described in <span>[<a href="#RFC9052" class="cite xref">RFC9052</a>]</span>, if the COSE payload is transported separately ("detached content"), then it is the responsibility of the application to ensure that it will be transported without changes.<a href="#section-4-2" class="pilcrow">¶</a></p>
 <p id="section-4-3">The reason for applications to verify that CWT claims that are present both in the payload and the header of a CWT are identical, unless it defines other specific processing rules for these claims, is to eliminate potential confusion that might arise by having different values for the same claim, which could result in inconsistent processing of such claims.<a href="#section-4-3" class="pilcrow">¶</a></p>
-<p id="section-4-4">Profiles define how to use CWT claims for particular applications, whether they are in the COSE payload or the CWT Claims header parameter, or both.  Therefore, understanding how to process the CWT Claims requires unambiguously knowing the profile being used.  A recommended way to include this information in the COSE structure is use of the <code>typ</code> (type) Header Parameter <span>[<a href="#I-D.ietf-cose-typ-header-parameter" class="cite xref">I-D.ietf-cose-typ-header-parameter</a>]</span>.  Other methods for determining the profile can also be used.<a href="#section-4-4" class="pilcrow">¶</a></p>
+<p id="section-4-4">Processing information in claims prior to validating that their integrity is cryptographically secured can pose security risks.
+This is true whether the claims are in the payload or a header parameter.
+Implementers must ensure that any tentative decisions made based on previously unverified information are confirmed once the cryptographic processing has been completed.<a href="#section-4-4" class="pilcrow">¶</a></p>
+<p id="section-4-5">Profiles define how to use CWT claims and their semantics for particular applications, whether they are in the COSE payload or the CWT Claims header parameter, or both.  Therefore, understanding how to process the CWT Claims requires unambiguously knowing the profile being used.  A recommended way to include this information in the COSE structure is use of the <code>typ</code> (type) Header Parameter <span>[<a href="#I-D.ietf-cose-typ-header-parameter" class="cite xref">I-D.ietf-cose-typ-header-parameter</a>]</span>.  Other methods for determining the profile can also be used.<a href="#section-4-5" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="iana-considerations">
@@ -1291,7 +1299,7 @@ Claim-Label = int / text
 <dl class="references">
 <dt id="I-D.ietf-cose-typ-header-parameter">[I-D.ietf-cose-typ-header-parameter]</dt>
         <dd>
-<span class="refAuthor">Jones, M. B.</span> and <span class="refAuthor">O. Steele</span>, <span class="refTitle">"COSE "typ" (type) Header Parameter"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-ietf-cose-typ-header-parameter-01</span>, <time datetime="2023-11-06" class="refDate">6 November 2023</time>, <span>&lt;<a href="https://datatracker.ietf.org/api/v1/doc/document/draft-ietf-cose-typ-header-parameter/">https://datatracker.ietf.org/api/v1/doc/document/draft-ietf-cose-typ-header-parameter/</a>&gt;</span>. </dd>
+<span class="refAuthor">Jones, M. B.</span> and <span class="refAuthor">O. Steele</span>, <span class="refTitle">"COSE "typ" (type) Header Parameter"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-ietf-cose-typ-header-parameter-01</span>, <time datetime="2023-11-07" class="refDate">7 November 2023</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-ietf-cose-typ-header-parameter-01">https://datatracker.ietf.org/doc/html/draft-ietf-cose-typ-header-parameter-01</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="RFC7519">[RFC7519]</dt>
         <dd>
@@ -1333,69 +1341,76 @@ for their valuable contributions to this specification.<a href="#appendix-A-1" c
       <h2 id="name-document-history">
 <a href="#appendix-B" class="section-number selfRef">Appendix B. </a><a href="#name-document-history" class="section-name selfRef">Document History</a>
       </h2>
-<p id="appendix-B-1">-08<a href="#appendix-B-1" class="pilcrow">¶</a></p>
+<p id="appendix-B-1">-09<a href="#appendix-B-1" class="pilcrow">¶</a></p>
 <ul class="compact">
-<li class="compact" id="appendix-B-2.1">Added Security Consideration about profiles and processing CWT claims.<a href="#appendix-B-2.1" class="pilcrow">¶</a>
+<li class="compact" id="appendix-B-2.1">Described use cases where CWT claims can't be put in the payload in response to Hannes Tschofenig's IotDir review.<a href="#appendix-B-2.1" class="pilcrow">¶</a>
+</li>
+        <li class="compact" id="appendix-B-2.2">Said that profiles specify the semantics of the CWT claims in response to Carsten Bormann's feedback.<a href="#appendix-B-2.2" class="pilcrow">¶</a>
 </li>
       </ul>
-<p id="appendix-B-3">-07<a href="#appendix-B-3" class="pilcrow">¶</a></p>
+<p id="appendix-B-3">-08<a href="#appendix-B-3" class="pilcrow">¶</a></p>
 <ul class="compact">
-<li class="compact" id="appendix-B-4.1">Added Privacy Consideration about unencrypted claims in header parameters.<a href="#appendix-B-4.1" class="pilcrow">¶</a>
-</li>
-        <li class="compact" id="appendix-B-4.2">Added Security Consideration about detached content.<a href="#appendix-B-4.2" class="pilcrow">¶</a>
-</li>
-        <li class="compact" id="appendix-B-4.3">Added Security Consideration about claims that are present both in the payload and the header of a CWT.<a href="#appendix-B-4.3" class="pilcrow">¶</a>
-</li>
-        <li class="compact" id="appendix-B-4.4">Changed requested IANA COSE Header Parameter assignment number from 13 to 15 due to subsequent assignments of 13 and 14.<a href="#appendix-B-4.4" class="pilcrow">¶</a>
-</li>
-        <li class="compact" id="appendix-B-4.5">Acknowledged last call reviewers.<a href="#appendix-B-4.5" class="pilcrow">¶</a>
+<li class="compact" id="appendix-B-4.1">Added Security Consideration about profiles and processing CWT claims.<a href="#appendix-B-4.1" class="pilcrow">¶</a>
 </li>
       </ul>
-<p id="appendix-B-5">-06<a href="#appendix-B-5" class="pilcrow">¶</a></p>
+<p id="appendix-B-5">-07<a href="#appendix-B-5" class="pilcrow">¶</a></p>
 <ul class="compact">
-<li class="compact" id="appendix-B-6.1">Changed requested IANA COSE Header Parameter assignment number from 11 to 13 due to Countersignature being allocated 11.<a href="#appendix-B-6.1" class="pilcrow">¶</a>
+<li class="compact" id="appendix-B-6.1">Added Privacy Consideration about unencrypted claims in header parameters.<a href="#appendix-B-6.1" class="pilcrow">¶</a>
 </li>
-        <li class="compact" id="appendix-B-6.2">Reference correct registry IANA COSE Header Parameters.<a href="#appendix-B-6.2" class="pilcrow">¶</a>
+        <li class="compact" id="appendix-B-6.2">Added Security Consideration about detached content.<a href="#appendix-B-6.2" class="pilcrow">¶</a>
+</li>
+        <li class="compact" id="appendix-B-6.3">Added Security Consideration about claims that are present both in the payload and the header of a CWT.<a href="#appendix-B-6.3" class="pilcrow">¶</a>
+</li>
+        <li class="compact" id="appendix-B-6.4">Changed requested IANA COSE Header Parameter assignment number from 13 to 15 due to subsequent assignments of 13 and 14.<a href="#appendix-B-6.4" class="pilcrow">¶</a>
+</li>
+        <li class="compact" id="appendix-B-6.5">Acknowledged last call reviewers.<a href="#appendix-B-6.5" class="pilcrow">¶</a>
 </li>
       </ul>
-<p id="appendix-B-7">-05<a href="#appendix-B-7" class="pilcrow">¶</a></p>
+<p id="appendix-B-7">-06<a href="#appendix-B-7" class="pilcrow">¶</a></p>
 <ul class="compact">
-<li class="compact" id="appendix-B-8.1">Added Acknowledgements section.<a href="#appendix-B-8.1" class="pilcrow">¶</a>
+<li class="compact" id="appendix-B-8.1">Changed requested IANA COSE Header Parameter assignment number from 11 to 13 due to Countersignature being allocated 11.<a href="#appendix-B-8.1" class="pilcrow">¶</a>
 </li>
-        <li class="compact" id="appendix-B-8.2">Addressed WGLC feedback.  Specifically...<a href="#appendix-B-8.2" class="pilcrow">¶</a>
-</li>
-        <li class="compact" id="appendix-B-8.3">Added statement about being able to use the header parameter in any COSE object.<a href="#appendix-B-8.3" class="pilcrow">¶</a>
-</li>
-        <li class="compact" id="appendix-B-8.4">Moved statment about verifing that claim values present in both the header and payload are identical from the Security Considerations to the body of the specification.<a href="#appendix-B-8.4" class="pilcrow">¶</a>
+        <li class="compact" id="appendix-B-8.2">Reference correct registry IANA COSE Header Parameters.<a href="#appendix-B-8.2" class="pilcrow">¶</a>
 </li>
       </ul>
-<p id="appendix-B-9">-04<a href="#appendix-B-9" class="pilcrow">¶</a></p>
+<p id="appendix-B-9">-05<a href="#appendix-B-9" class="pilcrow">¶</a></p>
 <ul class="compact">
-<li class="compact" id="appendix-B-10.1">Update author affiliation.<a href="#appendix-B-10.1" class="pilcrow">¶</a>
+<li class="compact" id="appendix-B-10.1">Added Acknowledgements section.<a href="#appendix-B-10.1" class="pilcrow">¶</a>
 </li>
-        <li class="compact" id="appendix-B-10.2">Add standard reference to RFC terminology.<a href="#appendix-B-10.2" class="pilcrow">¶</a>
+        <li class="compact" id="appendix-B-10.2">Addressed WGLC feedback.  Specifically...<a href="#appendix-B-10.2" class="pilcrow">¶</a>
 </li>
-        <li class="compact" id="appendix-B-10.3">Added reference to security considerations from RFC8392.<a href="#appendix-B-10.3" class="pilcrow">¶</a>
+        <li class="compact" id="appendix-B-10.3">Added statement about being able to use the header parameter in any COSE object.<a href="#appendix-B-10.3" class="pilcrow">¶</a>
+</li>
+        <li class="compact" id="appendix-B-10.4">Moved statment about verifing that claim values present in both the header and payload are identical from the Security Considerations to the body of the specification.<a href="#appendix-B-10.4" class="pilcrow">¶</a>
 </li>
       </ul>
-<p id="appendix-B-11">-03<a href="#appendix-B-11" class="pilcrow">¶</a></p>
+<p id="appendix-B-11">-04<a href="#appendix-B-11" class="pilcrow">¶</a></p>
 <ul class="compact">
-<li class="compact" id="appendix-B-12.1">Added recommendation around header treatment in protected vs unprotected.<a href="#appendix-B-12.1" class="pilcrow">¶</a>
+<li class="compact" id="appendix-B-12.1">Update author affiliation.<a href="#appendix-B-12.1" class="pilcrow">¶</a>
+</li>
+        <li class="compact" id="appendix-B-12.2">Add standard reference to RFC terminology.<a href="#appendix-B-12.2" class="pilcrow">¶</a>
+</li>
+        <li class="compact" id="appendix-B-12.3">Added reference to security considerations from RFC8392.<a href="#appendix-B-12.3" class="pilcrow">¶</a>
 </li>
       </ul>
-<p id="appendix-B-13">-02<a href="#appendix-B-13" class="pilcrow">¶</a></p>
+<p id="appendix-B-13">-03<a href="#appendix-B-13" class="pilcrow">¶</a></p>
 <ul class="compact">
-<li class="compact" id="appendix-B-14.1">Added CDDL description for CWT claim value.<a href="#appendix-B-14.1" class="pilcrow">¶</a>
+<li class="compact" id="appendix-B-14.1">Added recommendation around header treatment in protected vs unprotected.<a href="#appendix-B-14.1" class="pilcrow">¶</a>
 </li>
       </ul>
-<p id="appendix-B-15">-01<a href="#appendix-B-15" class="pilcrow">¶</a></p>
+<p id="appendix-B-15">-02<a href="#appendix-B-15" class="pilcrow">¶</a></p>
 <ul class="compact">
-<li class="compact" id="appendix-B-16.1">Changed example from Key ID to Issuer.<a href="#appendix-B-16.1" class="pilcrow">¶</a>
+<li class="compact" id="appendix-B-16.1">Added CDDL description for CWT claim value.<a href="#appendix-B-16.1" class="pilcrow">¶</a>
 </li>
       </ul>
-<p id="appendix-B-17">-00<a href="#appendix-B-17" class="pilcrow">¶</a></p>
+<p id="appendix-B-17">-01<a href="#appendix-B-17" class="pilcrow">¶</a></p>
 <ul class="compact">
-<li class="compact" id="appendix-B-18.1">Created draft-ietf-cose-cwt-claims-in-headers-00 from draft-looker-cose-cwt-claims-in-headers-00 following working group adoption.<a href="#appendix-B-18.1" class="pilcrow">¶</a>
+<li class="compact" id="appendix-B-18.1">Changed example from Key ID to Issuer.<a href="#appendix-B-18.1" class="pilcrow">¶</a>
+</li>
+      </ul>
+<p id="appendix-B-19">-00<a href="#appendix-B-19" class="pilcrow">¶</a></p>
+<ul class="compact">
+<li class="compact" id="appendix-B-20.1">Created draft-ietf-cose-cwt-claims-in-headers-00 from draft-looker-cose-cwt-claims-in-headers-00 following working group adoption.<a href="#appendix-B-20.1" class="pilcrow">¶</a>
 </li>
       </ul>
 </section>
