@@ -37,12 +37,16 @@ organization = "Self-Issued Consulting"
 .# Abstract
 
 This document describes how to include CBOR Web Token (CWT) claims in the header parameters of any COSE structure. This functionality helps to facilitate applications that wish to make use of CBOR Web Token (CWT) claims in encrypted COSE structures and/or COSE structures featuring detached signatures, while having some of those claims be available before decryption and/or without inspecting the detached payload.
+Another use case is using CWT claims with payloads that are not CWT Claims Sets, including payloads that are not CBOR at all.
 
 {mainmatter}
 
 # Introduction
 
 In some applications of COSE, it is useful to have a standard representation of CWT claims [@!RFC8392] available in the header parameters. These include encrypted COSE structures, which may or may not be an encrypted CWT and/or those featuring a detached signature.
+Another use case is using CWT claims with payloads that are not CWT Claims Sets, including payloads that are not CBOR at all.
+For instance, an application might want to include an "iss" (issuer) claim in a COSE_Sign1 structure
+when the payload being signed is a non-CBOR data structure, such as a bitmap image, and the issuer value is used for key discovery.
 
 Section 5.3 of JSON Web Token (JWT) [@RFC7519] defined a similar mechanism for expressing selected JWT based claims as JOSE header parameters.  This JWT feature was motivated by the desire to have certain claims, such as the Issuer value, be visible to software processing the JWT, even though the JWT is encrypted.  No corresponding feature was standardized for CWTs, which was an omission that this specification corrects.
 
@@ -89,7 +93,11 @@ As described in [@RFC9052], if the COSE payload is transported separately ("deta
 
 The reason for applications to verify that CWT claims that are present both in the payload and the header of a CWT are identical, unless it defines other specific processing rules for these claims, is to eliminate potential confusion that might arise by having different values for the same claim, which could result in inconsistent processing of such claims.
 
-Profiles define how to use CWT claims for particular applications, whether they are in the COSE payload or the CWT Claims header parameter, or both.  Therefore, understanding how to process the CWT Claims requires unambiguously knowing the profile being used.  A recommended way to include this information in the COSE structure is use of the `typ` (type) Header Parameter [@I-D.ietf-cose-typ-header-parameter].  Other methods for determining the profile can also be used.
+Processing information in claims prior to validating that their integrity is cryptographically secured can pose security risks.
+This is true whether the claims are in the payload or a header parameter.
+Implementers must ensure that any tentative decisions made based on previously unverified information are confirmed once the cryptographic processing has been completed.
+
+Profiles define how to use CWT claims and their semantics for particular applications, whether they are in the COSE payload or the CWT Claims header parameter, or both.  Therefore, understanding how to process the CWT Claims requires unambiguously knowing the profile being used.  A recommended way to include this information in the COSE structure is use of the `typ` (type) Header Parameter [@I-D.ietf-cose-typ-header-parameter].  Other methods for determining the profile can also be used.
 
 # IANA Considerations
 
@@ -114,6 +122,11 @@ Peter Yee
 for their valuable contributions to this specification.
 
 # Document History
+
+-09
+
+* Described use cases where CWT claims can't be put in the payload in response to Hannes Tschofenig's IotDir review.
+* Said that profiles specify the semantics of the CWT claims in response to Carsten Bormann's feedback.
 
 -08
 
