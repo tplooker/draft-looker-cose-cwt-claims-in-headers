@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2023-11-09T00:19:00.177578+00:00",
+  "timestamp": "2023-11-12T00:20:59.373315+00:00",
   "repo": "tplooker/draft-ietf-cose-cwt-claims-in-headers",
   "labels": [
     {
@@ -694,6 +694,61 @@
           "body": "",
           "createdAt": "2023-11-06T11:35:53Z",
           "updatedAt": "2023-11-06T11:35:53Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "id": "PR_kwDOGyRGVs5fBnZM",
+      "title": "Described non-CBOR payload use cases and claims semantics",
+      "url": "https://github.com/tplooker/draft-ietf-cose-cwt-claims-in-headers/pull/13",
+      "state": "MERGED",
+      "author": "selfissued",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Described use cases where CWT claims can't be put in the payload in response to Hannes Tschofenig's IotDir review.\r\n\r\nSaid that profiles specify the semantics of the CWT claims in response to Carsten Bormann's feedback.\r\n",
+      "createdAt": "2023-11-09T11:44:12Z",
+      "updatedAt": "2023-11-10T15:59:23Z",
+      "baseRepository": "tplooker/draft-ietf-cose-cwt-claims-in-headers",
+      "baseRefName": "main",
+      "baseRefOid": "21af7e6b03749dea466aee9dd8d3c088bce5e0d8",
+      "headRepository": "selfissued/draft-ietf-cose-cwt-claims-in-headers",
+      "headRefName": "mbj-non-cbor-and-semantics",
+      "headRefOid": "bfba4618aa44a686098dcd956ce7d8ebe5a251c9",
+      "closedAt": "2023-11-10T15:59:22Z",
+      "mergedAt": "2023-11-10T15:59:22Z",
+      "mergedBy": "selfissued",
+      "mergeCommit": {
+        "oid": "1649f72488e8f3ad9e1f264c6cf56883b2d08172"
+      },
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOGyRGVs5mqpLW",
+          "commit": {
+            "abbreviatedOid": "39348e6"
+          },
+          "author": "OR13",
+          "authorAssociation": "NONE",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2023-11-09T12:47:04Z",
+          "updatedAt": "2023-11-09T12:47:04Z",
+          "comments": []
+        },
+        {
+          "id": "PRR_kwDOGyRGVs5m0l1b",
+          "commit": {
+            "abbreviatedOid": "bfba461"
+          },
+          "author": "hannestschofenig",
+          "authorAssociation": "NONE",
+          "state": "APPROVED",
+          "body": "Thanks for the work, Mike! Appreciate your quick response",
+          "createdAt": "2023-11-10T15:47:01Z",
+          "updatedAt": "2023-11-10T15:47:01Z",
           "comments": []
         }
       ]
