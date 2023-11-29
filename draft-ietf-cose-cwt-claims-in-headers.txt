@@ -5,8 +5,8 @@
 COSE                                                           T. Looker
 Internet-Draft                                                     Mattr
 Intended status: Standards Track                                M. Jones
-Expires: 13 May 2024                              Self-Issued Consulting
-                                                        10 November 2023
+Expires: 1 June 2024                              Self-Issued Consulting
+                                                        29 November 2023
 
 
               CBOR Web Token (CWT) Claims in COSE Headers
@@ -46,7 +46,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 13 May 2024.
+   This Internet-Draft will expire on 1 June 2024.
 
 Copyright Notice
 
@@ -104,6 +104,23 @@ Table of Contents
    Instead, this specification defines a single header parameter
    registered in the IANA "COSE Header Parameters" registry that creates
    a location to store CWT claims in a COSE header parameter.
+
+   This specification does not define how to use CWT claims and their
+   semantics for particular applications, whether they are in the COSE
+   payload or the CWT Claims header parameter, or both.  Therefore,
+   understanding how to process the CWT Claims header parameter requires
+   unambiguously knowing the intended interpretation.  The necessary
+   information about this MAY come from other header parameters.  Unless
+   there already is a natural way of providing this information at an
+   appropriate level of integrity protection and authentication, a
+   RECOMMENDED way to include this information in the COSE structure is
+   use of the typ (type) Header Parameter
+   [I-D.ietf-cose-typ-header-parameter].  Other methods for determining
+   the intended interpretation MAY also be used.  Recipients of the CWT
+   Claims header parameter MUST NOT use the information in the CWT
+   Claims header parameter beyond the integrity protection or
+   authentication afforded to the CWT Claims header and the information
+   used to derive its intended interpretation.
 
 1.1.  Requirements Terminology
 
@@ -182,16 +199,9 @@ Table of Contents
    is true whether the claims are in the payload or a header parameter.
    Implementers must ensure that any tentative decisions made based on
    previously unverified information are confirmed once the
-   cryptographic processing has been completed.
-
-   Profiles define how to use CWT claims and their semantics for
-   particular applications, whether they are in the COSE payload or the
-   CWT Claims header parameter, or both.  Therefore, understanding how
-   to process the CWT Claims requires unambiguously knowing the profile
-   being used.  A recommended way to include this information in the
-   COSE structure is use of the typ (type) Header Parameter
-   [I-D.ietf-cose-typ-header-parameter].  Other methods for determining
-   the profile can also be used.
+   cryptographic processing has been completed.  This includes any
+   information that was used to derive the intended interpretation of
+   the CWT claims parameter.
 
 5.  IANA Considerations
 
@@ -202,6 +212,13 @@ Table of Contents
 6.  References
 
 6.1.  Normative References
+
+   [I-D.ietf-cose-typ-header-parameter]
+              Jones, M. B. and O. Steele, "COSE "typ" (type) Header
+              Parameter", Work in Progress, Internet-Draft, draft-ietf-
+              cose-typ-header-parameter-01, 7 November 2023,
+              <https://datatracker.ietf.org/doc/html/draft-ietf-cose-
+              typ-header-parameter-01>.
 
    [IANA.COSE]
               IANA, "COSE Header Parameters",
@@ -222,13 +239,6 @@ Table of Contents
               May 2018, <https://www.rfc-editor.org/info/rfc8392>.
 
 6.2.  Informative References
-
-   [I-D.ietf-cose-typ-header-parameter]
-              Jones, M. B. and O. Steele, "COSE "typ" (type) Header
-              Parameter", Work in Progress, Internet-Draft, draft-ietf-
-              cose-typ-header-parameter-01, 7 November 2023,
-              <https://datatracker.ietf.org/doc/html/draft-ietf-cose-
-              typ-header-parameter-01>.
 
    [RFC7519]  Jones, M., Bradley, J., and N. Sakimura, "JSON Web Token
               (JWT)", RFC 7519, DOI 10.17487/RFC7519, May 2015,
