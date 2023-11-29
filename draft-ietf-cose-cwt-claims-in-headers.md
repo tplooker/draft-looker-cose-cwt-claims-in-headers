@@ -52,6 +52,23 @@ Section 5.3 of JSON Web Token (JWT) [@RFC7519] defined a similar mechanism for e
 
 Directly including CWT claim values as COSE header parameter values would not work, since there are conflicts between the numeric header parameter assignments and the numeric CWT claim assignments.  Instead, this specification defines a single header parameter registered in the IANA "COSE Header Parameters" registry that creates a location to store CWT claims in a COSE header parameter.
 
+This specification does not define how to use CWT claims and their
+semantics for particular applications, whether they are in the COSE
+payload or the CWT Claims header parameter, or both.
+Therefore, understanding how to process the CWT Claims header
+parameter requires unambiguously knowing the intended interpretation.
+The necessary information about this MAY come from other header parameters.
+Unless there already is a natural way of providing this information at
+an appropriate level of integrity protection and authentication, a
+RECOMMENDED way to include this information in the COSE structure is
+use of the `typ` (type) Header Parameter
+[@!I-D.ietf-cose-typ-header-parameter].
+Other methods for determining the intended interpretation MAY also be used.
+Recipients of the CWT Claims header parameter MUST NOT use the
+information in the CWT Claims header parameter beyond the integrity
+protection or authentication afforded to the CWT Claims header and the
+information used to derive its intended interpretation.
+
 ## Requirements Terminology
 
 The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "NOT RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in BCP 14 [@!RFC2119] [@!RFC8174] when, and only when, they appear in all capitals, as shown here.
@@ -96,8 +113,8 @@ The reason for applications to verify that CWT claims that are present both in t
 Processing information in claims prior to validating that their integrity is cryptographically secured can pose security risks.
 This is true whether the claims are in the payload or a header parameter.
 Implementers must ensure that any tentative decisions made based on previously unverified information are confirmed once the cryptographic processing has been completed.
-
-Profiles define how to use CWT claims and their semantics for particular applications, whether they are in the COSE payload or the CWT Claims header parameter, or both.  Therefore, understanding how to process the CWT Claims requires unambiguously knowing the profile being used.  A recommended way to include this information in the COSE structure is use of the `typ` (type) Header Parameter [@I-D.ietf-cose-typ-header-parameter].  Other methods for determining the profile can also be used.
+This includes any information that was used to derive the intended
+interpretation of the CWT claims parameter.
 
 # IANA Considerations
 
