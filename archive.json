@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2023-11-28T00:20:01.221524+00:00",
+  "timestamp": "2023-11-30T00:20:13.737885+00:00",
   "repo": "tplooker/draft-ietf-cose-cwt-claims-in-headers",
   "labels": [
     {
@@ -749,6 +749,48 @@
           "body": "Thanks for the work, Mike! Appreciate your quick response",
           "createdAt": "2023-11-10T15:47:01Z",
           "updatedAt": "2023-11-10T15:47:01Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 14,
+      "id": "PR_kwDOGyRGVs5gp3BZ",
+      "title": "Avoid the term profile.  Make information about the intended",
+      "url": "https://github.com/tplooker/draft-ietf-cose-cwt-claims-in-headers/pull/14",
+      "state": "MERGED",
+      "author": "cabo",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "...interpretation a protocol requirement, not a security consideration.\r\n\r\nAddresses discussion at IANA #1284212",
+      "createdAt": "2023-11-29T10:47:03Z",
+      "updatedAt": "2023-11-29T13:25:25Z",
+      "baseRepository": "tplooker/draft-ietf-cose-cwt-claims-in-headers",
+      "baseRefName": "main",
+      "baseRefOid": "1649f72488e8f3ad9e1f264c6cf56883b2d08172",
+      "headRepository": "cabo/draft-ietf-cose-cwt-claims-in-headers",
+      "headRefName": "semantics",
+      "headRefOid": "f6f3decea43a2540675032a4ab58ee0c04d2d679",
+      "closedAt": "2023-11-29T13:25:25Z",
+      "mergedAt": "2023-11-29T13:25:25Z",
+      "mergedBy": "selfissued",
+      "mergeCommit": {
+        "oid": "bed79952c6d43fd9bec21f8a3cc2cd323393750b"
+      },
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOGyRGVs5onyCl",
+          "commit": {
+            "abbreviatedOid": "f6f3dec"
+          },
+          "author": "selfissued",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2023-11-29T13:24:21Z",
+          "updatedAt": "2023-11-29T13:24:21Z",
           "comments": []
         }
       ]
